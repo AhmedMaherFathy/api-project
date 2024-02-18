@@ -44,8 +44,7 @@ class AuthController extends Controller
         }
     }
     public function logout(){
-        $id = Auth::user()->id;
         Auth::logout();
-        return response()->json(['message'=>'logout successfully','id'=>$id,'status'=>Response::HTTP_OK]);
+        return response()->json(['message'=>'logout successfully','status'=>Response::HTTP_OK]);
     }
 }
